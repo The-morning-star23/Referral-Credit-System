@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Node.js server
+server/dist/
+server/.env
+server/*.log
+
+# Next.js client
+client/.next/
+client/out/
+client/.env.local
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# OS & Editor
+.DS_Store
+.vscode/
