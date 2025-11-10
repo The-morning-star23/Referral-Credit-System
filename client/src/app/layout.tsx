@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast"; // <-- Import Toaster
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FileSure Referral System",
+  title: "Referral & Credit System",
   description: "Full stack referral assignment",
 };
 
