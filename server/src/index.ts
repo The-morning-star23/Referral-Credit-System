@@ -4,6 +4,8 @@ import cors from "cors";
 import connectDB from "./config/db";
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './config/swagger';
 
 dotenv.config();
 connectDB();
@@ -13,6 +15,10 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+// --- Mount Swagger Docs ---
+// This serves the interactive documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/", (req: Request, res: Response) => {
   res.send("API is running...");
